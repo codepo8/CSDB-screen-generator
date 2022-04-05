@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDB animation creator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+      <h1>CSDB animation creator</h1>
+      <p>Drag and Drop images, paste them, or use the upload bar.</p>
+      <p>Images will be centered on a 384ⅹ272 canvas, you can choose a fill colour for the border and a framerate.</p>
+      <div class="file">
+          <input id="getfile" type="file" multiple />
+          <label for="getfile">Upload</label>
+      </div>
+      <output></output>
+      <div id="imagecontainer"></div>
+      <form>
+        <label for="col">Background:</label>    
+        <input type="color" id="col" value="#000000">
+        <label for="delay">Framerate (milliseconds):</label>    
+        <input type="number" id="delay" size="6" value="1000">
+        <button type="button">Create GIF</button>
+      </form>
+      <a href="" id="dl" download="csdb-animation.gif"><img id="image"></a>
+      </div>
+    <canvas id="bitmap"></canvas>
+    <footer>Code available on <a href="https://github.com/codepo8/CSDB-screen-generator">GitHub</a></footer>
+    <script src="js/tools.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
